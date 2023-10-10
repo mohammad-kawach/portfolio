@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import personal from "../assets/img/profile-pic.png";
 // import { ScrollSpy } from 'react-bootstrap';
 // import { scroller } from "react-scroll";
 
@@ -29,7 +30,7 @@ const Navigation = () => {
           <img
             className="img-fluid img-profile rounded-circle mx-auto mb-2"
             // src="../../assets/img/profile.jpg"
-            src="../assets/img/profile-pic.png"
+            src={personal}
             alt="personal-photo"
           />
         </span>
