@@ -1,3 +1,8 @@
+import typescript from '../assets/icons/typescript.svg';
+import bootstrap from '../assets/icons/bootstrap.png';
+import cpp from '../assets/icons/c++.png';
+import tailwind from '../assets/icons/tailwind-css.png"';
+
 const Skills = () => {
   return (
     <section className="resume-section" id="skills">
@@ -15,7 +20,7 @@ const Skills = () => {
             <i className="fab fa-js-square"></i>
           </li>
           <li className="list-inline-item inline-flex">
-            <img src="./src/assets/icons/typescript.svg" alt="icon" />
+            <img src={typescript} alt="icon" />
           </li>
           <li className="list-inline-item inline-flex">
             <i className="fab fa-react"></i>
@@ -48,13 +53,13 @@ const Skills = () => {
             <i className="fab fa-github"></i>
           </li>
           <li className="list-inline-item inline-flex">
-            <img src="./src/assets/icons/bootstrap.png" alt="icon" />
+            <img src={bootstrap} alt="icon" />
           </li>
           <li className="list-inline-item inline-flex">
-            <img src="./src/assets/icons/tailwind-css.png" alt="icon" />
+            <img src={tailwind} alt="icon" />
           </li>
           <li className="list-inline-item inline-flex">
-            <img src="./src/assets/icons/c++.png" alt="icon" />
+            <img src={cpp} alt="icon" />
           </li>
         </ul>
         <div className="subheading mb-3">Workflow</div>
