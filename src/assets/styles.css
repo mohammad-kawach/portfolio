@@ -11389,7 +11389,7 @@ section.resume-section .resume-section-content {
 
 .sending button,
 .sending button:disabled {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -11412,4 +11412,15 @@ section.resume-section .resume-section-content {
 
 .alert-section .close-icon {
   cursor: pointer;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
