@@ -1,7 +1,7 @@
-import typescript from '../assets/icons/typescript.svg';
-import bootstrap from '../assets/icons/bootstrap.png';
-import cpp from '../assets/icons/c++.png';
-import tailwind from '../assets/icons/tailwind-css.png"';
+import typescript from "../assets/icons/typescript.svg";
+import bootstrap from "../assets/icons/bootstrap.png";
+import cpp from "../assets/icons/c++.png";
+import tailwind from "../assets/icons/tailwind-css.png";
 
 const Skills = () => {
   return (
