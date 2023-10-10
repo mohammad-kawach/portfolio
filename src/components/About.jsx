@@ -30,7 +30,8 @@ const About = () => {
             <span className="text-primary">&nbsp;Kawash</span>
           </h1>
           <div className="subheading mb-5">
-            Homs, Syria
+            Software Engineer & Front-End
+            Developer
             <br />
             <a href="tel:+963954250979">Call me</a>
             {/* <a href="mailto:mohmaad.kawach.777@gmail.com">Email me</a> */}

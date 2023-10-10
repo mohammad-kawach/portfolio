@@ -11313,12 +11313,18 @@ section.resume-section .resume-section-content {
 
 .list-inline {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns as needed */
+  grid-template-columns: repeat(
+    8,
+    1fr
+  ); /* Adjust the number of columns as needed */
   gap: 20px; /* Adjust the gap between items as needed */
 
   /* Media query for mobile devices */
   @media (max-width: 767px) {
-    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns for mobile */
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Adjust the number of columns for mobile */
   }
 }
 
@@ -11331,4 +11337,79 @@ section.resume-section .resume-section-content {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-submit,
+.btn-upload,
+.btn-submit:hover {
+  color: white;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.sender-info {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Adjust the number of columns as needed */
+  gap: 20px; /* Adjust the gap between items as needed */
+
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Adjust the number of columns for mobile */
+  }
+}
+
+.contact-form {
+  /* max-width: 400px; */
+  margin: 0 auto;
+}
+/* 
+.contact-form input,
+.contact-form textarea {
+  border-radius: 5px;
+} */
+
+.contact-form textarea {
+  margin-top: 20px;
+  height: 30vh;
+}
+
+.sender-info input,
+.message {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sending button,
+.sending button:disabled {
+  transition: .3s ease-in-out;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  /* color: white; */
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.sending button:hover {
+  background-color: #0056b3;
+}
+
+.alert-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-section .close-icon {
+  cursor: pointer;
 }
