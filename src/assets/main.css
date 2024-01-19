@@ -6,6 +6,16 @@
   --dark-theme-input-font-color: #6f6b6a;
 }
 
+* {
+  transition: 0.3s;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .dark-theme {
   background-color: var(--dark-theme-background-color);
   color: var(--dark-theme-font-color);
