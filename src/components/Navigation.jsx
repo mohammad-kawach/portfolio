@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import personal from "../assets/img/profile-pic.png";
+import ThemeToggler from "./ThemeToggler";
 // import { ScrollSpy } from 'react-bootstrap';
 // import { scroller } from "react-scroll";
 
@@ -24,6 +25,9 @@ const Navigation = () => {
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
+      {/* <button onClick={toggleTheme}>
+        Switch to {theme === "light" ? "dark" : "light"} theme
+      </button> */}
       <a className="navbar-brand js-scroll-trigger" href="#page-top">
         <span className="d-block d-lg-none">Mohammad Kawash</span>
         <span className="d-none d-lg-block">
@@ -77,6 +81,9 @@ const Navigation = () => {
             <a className="nav-link js-scroll-trigger" href="#contact">
               Contact Ne
             </a>
+          </li>
+          <li className="nav-item">
+            <ThemeToggler />
           </li>
           {/* <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#awards">

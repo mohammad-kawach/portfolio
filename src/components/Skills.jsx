@@ -2,12 +2,21 @@ import typescript from "../assets/icons/typescript.svg";
 import bootstrap from "../assets/icons/bootstrap.png";
 import cpp from "../assets/icons/c++.png";
 import tailwind from "../assets/icons/tailwind-css.png";
+import useThemeStore from "../store/useThemeStore";
+import MajorSkills from "./MajorSkills";
+import MinorSkills from "./MinorSkills";
 
 const Skills = () => {
+  const { theme } = useThemeStore();
+
   return (
     <section className="resume-section" id="skills">
       <div className="resume-section-content">
-        <h2 className="mb-5">Skills</h2>
+        <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
+          Skills
+        </h2>
+        <MajorSkills />
+        <MinorSkills />
         <div className="subheading mb-3">Programming Languages & Tools</div>
         <ul className="list-inline dev-icons grid-icons">
           <li className="list-inline-item inline-flex">

@@ -1,0 +1,22 @@
+:root {
+  --dark-theme-background-color: #181a1b;
+  --dark-theme-font-color: #c3beb6;
+  --dark-theme-input-background-color: #2b2a33;
+  --dark-theme-input-border-color: #8f8f9d;
+  --dark-theme-input-font-color: #6f6b6a;
+}
+
+.dark-theme {
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-font-color);
+}
+
+.dark-theme-input {
+  background: var(--dark-theme-input-background-color);
+  border-color: var(--dark-theme-input-border-color);
+  color: var(--dark-theme-input-font-color);
+}
+
+.dark-theme-heading {
+  color: var(--dark-theme-font-color);
+}

@@ -1,11 +1,21 @@
+import useThemeStore from "../store/useThemeStore";
+
 const Education = () => {
+  const { theme } = useThemeStore();
+
   return (
     <section className="resume-section" id="education">
       <div className="resume-section-content">
-        <h2 className="mb-5">Education</h2>
+        <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
+          Education
+        </h2>
         <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="flex-grow-1">
-            <h3 className="mb-0">Al-Baath University</h3>
+            <h3
+              className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
+            >
+              Al-Baath University
+            </h3>
             <div className="subheading mb-3">Bachelor of Science</div>
             <div>IT - Software Engineering</div>
             <p>GPA: 3.0</p>

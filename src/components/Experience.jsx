@@ -1,11 +1,21 @@
+import useThemeStore from "../store/useThemeStore";
+
 const Experience = () => {
+  const { theme } = useThemeStore();
+
   return (
     <section className="resume-section" id="experience">
       <div className="resume-section-content">
-        <h2 className="mb-5">Experience</h2>
+        <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
+          Experience
+        </h2>
         <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="flex-grow-1">
-            <h3 className="mb-0">Digital Edge</h3>
+            <h3
+              className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
+            >
+              Digital Edge
+            </h3>
             <div className="subheading mb-3">
               Front-End Developer <span className="text-primary">&</span>{" "}
               WordPress Developer
@@ -29,7 +39,11 @@ const Experience = () => {
         </div>
         <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="flex-grow-1">
-            <h3 className="mb-0">Innovura</h3>
+            <h3
+              className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
+            >
+              Innovura
+            </h3>
             <div className="subheading mb-3">Front-End Developer</div>
             <p>
               In my role at Innovura Company, I had the opportunity to develop
@@ -50,7 +64,11 @@ const Experience = () => {
         </div>
         <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="flex-grow-1">
-            <h3 className="mb-0">Unlimited Creative Solutions - UCT</h3>
+            <h3
+              className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
+            >
+              Unlimited Creative Solutions - UCT
+            </h3>
             <div className="subheading mb-3">WordPress Developer</div>
             <p>
               In my role at UCT, I focused primarily on WordPress development,

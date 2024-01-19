@@ -1,8 +1,14 @@
+import useThemeStore from "../store/useThemeStore";
+
 const Interests = () => {
+  const { theme } = useThemeStore();
+
   return (
     <section className="resume-section" id="interests">
       <div className="resume-section-content">
-        <h2 className="mb-5">Interests</h2>
+        <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
+          Interests
+        </h2>
         <p>
           As a web developer, I am deeply passionate about exploring the latest
           advancements in front-end web development technologies. I dedicate a

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import useThemeStore from "../store/useThemeStore";
 
 const About = () => {
+  const { theme } = useThemeStore();
+
   useEffect(() => {
     const handleTelLinkClick = (event) => {
       if (!/Mobi|Android/i.test(navigator.userAgent)) {
@@ -25,13 +28,12 @@ const About = () => {
     <>
       <section className="resume-section" id="about">
         <div className="resume-section-content">
-          <h1 className="mb-0">
+          <h1 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}>
             Mohammad
             <span className="text-primary">&nbsp;Kawash</span>
           </h1>
           <div className="subheading mb-5">
-            Software Engineer & Front-End
-            Developer
+            Software Engineer & Front-End Developer
             <br />
             <a href="tel:+963954250979">Call me</a>
             {/* <a href="mailto:mohmaad.kawach.777@gmail.com">Email me</a> */}

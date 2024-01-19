@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import useThemeStore from "../store/useThemeStore";
 // import "./ContactForm.css"; // Import the CSS file for styling
 
 function ContactForm() {
+  const { theme } = useThemeStore();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -96,6 +99,7 @@ function ContactForm() {
       )}
       <div className="sender-info">
         <input
+          className={`${theme === "dark" ? "dark-theme-input" : ""}`}
           type="text"
           value={name}
           onChange={(event) => setName(event.target.value)}
@@ -103,6 +107,7 @@ function ContactForm() {
           required
         />
         <input
+          className={`${theme === "dark" ? "dark-theme-input" : ""}`}
           type="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
@@ -111,7 +116,7 @@ function ContactForm() {
         />
       </div>
       <textarea
-        className="message"
+        className={`${theme === "dark" ? "dark-theme-input" : ""} message`}
         value={message}
         onChange={(event) => setMessage(event.target.value)}
         placeholder="Your Message"
