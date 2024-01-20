@@ -30,3 +30,16 @@
 .dark-theme-heading {
   color: var(--dark-theme-font-color);
 }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}

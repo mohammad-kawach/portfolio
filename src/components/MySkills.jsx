@@ -4,10 +4,10 @@ const MySkills = (props) => {
   return (
     <div className="mb-3">
       <div className="subheading mb-3">{props.skillsHeading}</div>
-      <ul className="fa-ul mb-0">
+      <ul className="fa-ul mb-0 skills-grid">
         {props.skills.map((skill, key) => {
           return (
-            <li key={key}>
+            <li key={key} className="grid-item">
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>

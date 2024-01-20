@@ -17,7 +17,7 @@ export const MAJOR_SKILLS = [
   "Shadcn UI",
 ];
 
-export const MINOR_SKILLS = ["Design Patterns", "PHP", "MySQL", "Java", "C++"];
+export const MINOR_SKILLS = ["Design Patterns", "WordPress", "PHP", "MySQL", "Java", "C++"];
 
 export const WORKFLOW = [
   "Mobile-First, Responsive Design",
