@@ -11424,3 +11424,14 @@ section.resume-section .resume-section-content {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.errors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+
+.error-msg {
+  color: #ce2222;
+  font-weight: bold;
+}

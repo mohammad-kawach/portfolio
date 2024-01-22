@@ -3,7 +3,7 @@
   --dark-theme-font-color: #c3beb6;
   --dark-theme-input-background-color: #2b2a33;
   --dark-theme-input-border-color: #8f8f9d;
-  --dark-theme-input-font-color: #6f6b6a;
+  --dark-theme-input-font-color: #c3beb6;
 }
 
 * {
@@ -42,4 +42,10 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
   }
+}
+
+.alert-close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }

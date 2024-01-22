@@ -1,138 +1,148 @@
-import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
 import useThemeStore from "../store/useThemeStore";
-// import "./ContactForm.css"; // Import the CSS file for styling
+// import { DevTool } from "@hookform/devtools";
+import { EMAIL_REGEX, SERVICE_ID, TEMPLATE_ID, USER_ID } from "./constants";
+import { useState } from "react";
 
 function ContactForm() {
+  const [isSending, seIsSending] = useState(false);
+  const [messageSentSuccessfullyAlert, setMessageSentSuccessfullyAlert] =
+    useState("");
+  const [messageNotSentAlert, setMessageNotSentAlert] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting, isDirty },
+    // control,
+    reset,
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
   const { theme } = useThemeStore();
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [errorMessages, setErrorMessages] = useState([]);
-  const [formSubmitted, setFormSubmitted] = useState(false); // New state flag
-  const IS_FORM_EMPTY = message === "" || email === "" || name === "";
-  const SERVICE_ID = "service_qtqbv5j";
-  const TEMPLATE_ID = "template_sq1gamw";
-  const USER_ID = "Waiya8XK4ra9Uh58K";
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  useEffect(() => {
-    if (formSubmitted && errorMessages.length === 0) {
-      sendEmail();
-    }
-  }, [formSubmitted, errorMessages]); // Trigger the effect when formSubmitted or errorMessages change
-
-  const sendEmail = () => {
+  const sendEmail = (data) => {
+    seIsSending(true);
     emailjs
       .send(
         SERVICE_ID,
         TEMPLATE_ID,
-        { from_name: name, message, reply_to: email },
+        { from_name: data.name, message: data.message, reply_to: data.email },
         USER_ID
       )
       .then((response) => {
+        seIsSending(false);
         console.log("Email sent successfully!", response);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setFormSubmitted(false); // Reset the formSubmitted flag
+        setMessageSentSuccessfullyAlert(
+          "I've received your message successfully."
+        );
+        reset();
       })
       .catch((error) => {
+        seIsSending(false);
+        setMessageNotSentAlert("There was an error, please try again later.");
         console.error("Error sending email:", error);
       });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setErrorMessages([]);
-    setFormSubmitted(true); // Set the formSubmitted flag to true
-
-    if (message.length < 5) {
-      setErrorMessages((prevMessages) => [
-        ...prevMessages,
-        "Message is too short.",
-      ]);
-    }
-
-    if (!EMAIL_REGEX.test(email)) {
-      setErrorMessages((prevMessages) => [
-        ...prevMessages,
-        "Email is invalid.",
-      ]);
-    }
-
-    if (name.length === 0) {
-      setErrorMessages((prevMessages) => [
-        ...prevMessages,
-        "Please type your name.",
-      ]);
-    }
+  const onSubmit = (data) => {
+    sendEmail(data);
   };
 
-  const removeErrorMessage = (index) => {
-    setErrorMessages((prevMessages) => {
-      const updatedMessages = [...prevMessages];
-      updatedMessages.splice(index, 1);
-      return updatedMessages;
-    });
+  const closeSuccessAlert = () => {
+    setMessageSentSuccessfullyAlert("");
+  };
 
-    // Check if all error messages have been cleared
-    if (errorMessages.length === 1) {
-      setFormSubmitted(false); // Reset the formSubmitted flag
-    }
+  const closeErrorAlert = () => {
+    setMessageNotSentAlert("");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      {errorMessages.length > 0 && (
-        <div>
-          {errorMessages.map((message, index) => (
-            <div key={index} className="alert alert-danger alert-section">
-              {message}
-              <div onClick={() => removeErrorMessage(index)}>
-                <i className="fa fa-lg fa-close close-icon"></i>
-              </div>
-            </div>
-          ))}
+    <>
+      {messageSentSuccessfullyAlert && (
+        <div className="alert alert-info d-flex justify-content-between">
+          {messageSentSuccessfullyAlert}
+          <div className="alert-close" onClick={closeSuccessAlert}>
+            <div className="fa fa-close fa-lg"></div>
+          </div>
         </div>
       )}
-      <div className="sender-info">
-        <input
-          className={`${theme === "dark" ? "dark-theme-input" : ""}`}
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          placeholder="Your Name"
-          required
+      {messageNotSentAlert && (
+        <div className="alert alert-danger d-flex justify-content-between">
+          {messageNotSentAlert}
+          <div className="alert-close" onClick={closeErrorAlert}>
+            <div className="fa fa-close fa-lg"></div>
+          </div>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
+        <div className="sender-info">
+          <input
+            {...register("name", {
+              required: "Please type your name.",
+              minLength: {
+                value: 2,
+                message: "The name is too short.",
+              },
+            })}
+            className={`${theme === "dark" ? "dark-theme-input" : ""}`}
+            type="text"
+            placeholder="Your Name"
+          />
+          {errors.name && (
+            <p className="d-md-none error-msg">{errors.name.message}</p>
+          )}
+          <input
+            {...register("email", {
+              required: "Email is required.",
+              pattern: {
+                value: EMAIL_REGEX,
+                message: "Invalid email address format.",
+              },
+            })}
+            className={`${theme === "dark" ? "dark-theme-input" : ""}`}
+            type="email"
+            placeholder="Your Email"
+          />
+          {errors.email && (
+            <p className="d-md-none error-msg">{errors.email.message}</p>
+          )}
+        </div>
+        <div className="errors d-sm-none d-md-grid">
+          {errors.name && (
+            <span className="error-msg">{errors.name.message}</span>
+          )}
+          {errors.email && (
+            <span className="error-msg">{errors.email.message}</span>
+          )}
+        </div>
+        <textarea
+          {...register("message", { required: "Message is required." })}
+          className={`${theme === "dark" ? "dark-theme-input" : ""} message`}
+          placeholder="Your Message"
         />
-        <input
-          className={`${theme === "dark" ? "dark-theme-input" : ""}`}
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder="Your Email"
-          required
-        />
-      </div>
-      <textarea
-        className={`${theme === "dark" ? "dark-theme-input" : ""} message`}
-        value={message}
-        onChange={(event) => setMessage(event.target.value)}
-        placeholder="Your Message"
-        required
-      />
-      <div className="sending">
-        <button
-          // className="btn btn-primary btn-submit"
-          className="btn"
-          type="submit"
-          disabled={IS_FORM_EMPTY || errorMessages.length > 0}
-        >
-          Send Email
-        </button>
-      </div>
-    </form>
+        {errors.message && (
+          <p className="error-msg mb-4 mt-2">{errors.message.message}</p>
+        )}
+        <div className="sending">
+          <button
+            className="btn"
+            type="submit"
+            disabled={!isDirty || isSending || isSubmitting}
+          >
+            {isSubmitting ? "Sending..." : "Send Email"}
+          </button>
+        </div>
+        {/* <DevTool control={control} /> */}
+      </form>
+    </>
   );
 }
 
