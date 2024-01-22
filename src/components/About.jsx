@@ -28,7 +28,9 @@ const About = () => {
     <>
       <section className="resume-section" id="about">
         <div className="resume-section-content">
-          <h1 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}>
+          <h1
+            className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
+          >
             Mohammad
             <span className="text-primary">&nbsp;Kawash</span>
           </h1>
@@ -49,6 +51,14 @@ const About = () => {
             dynamic and forward-thinking teams.
           </p>
           <div className="social-icons">
+            <a
+              className="social-icon"
+              href="https://drive.google.com/drive/u/0/folders/1LghZik1mPBckG_2CHRxGdAGcgE469H36"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i className="fas fa-file-alt"></i>
+            </a>
             <a
               className="social-icon"
               href="https://www.linkedin.com/in/mohammad-kawach/"

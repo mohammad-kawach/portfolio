@@ -43,11 +43,13 @@ function ContactForm() {
           "I've received your message successfully."
         );
         reset();
+        setTimeout(closeSuccessAlert, 7000);
       })
       .catch((error) => {
         seIsSending(false);
         setMessageNotSentAlert("There was an error, please try again later.");
         console.error("Error sending email:", error);
+        setTimeout(closeErrorAlert, 7000);
       });
   };
 

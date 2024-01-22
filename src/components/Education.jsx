@@ -1,4 +1,5 @@
 import useThemeStore from "../store/useThemeStore";
+import { EDUCATION_DESCRIPTION } from "./constants";
 
 const Education = () => {
   const { theme } = useThemeStore();
@@ -14,11 +15,12 @@ const Education = () => {
             <h3
               className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
             >
+              IT - Software Engineering <span className="text-primary">/</span>{" "}
               Al-Baath University
             </h3>
-            <div className="subheading mb-3">Bachelor of Science</div>
-            <div>IT - Software Engineering</div>
-            <p>GPA: 3.0</p>
+            <div className="text-primary subheading mb-3">Bachelor Degree</div>
+            <p>{EDUCATION_DESCRIPTION}</p>
+            <strong className="text-primary">GPA: 3.0</strong>
           </div>
           <div className="flex-shrink-0">
             <span className="text-primary">October 2017 - November 2022</span>
