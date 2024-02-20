@@ -41,7 +41,8 @@ const About = () => {
             Software Engineer & Front-End Developer
             <br />
             <a href="tel:+963954250979">Call me</a>
-            {/* <a href="mailto:mohmaad.kawach.777@gmail.com">Email me</a> */}
+            <br />
+            <a href="mailto:mkawash777@gmail.com">Email me</a>
           </div>
           <p className="lead mb-5">
             As a passionate software engineer and front-end (React JS)
