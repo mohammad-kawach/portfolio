@@ -3,6 +3,33 @@ export const TEMPLATE_ID = "template_sq1gamw";
 export const USER_ID = "Waiya8XK4ra9Uh58K";
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+export const socialIcons = [
+  {
+    href: "https://drive.google.com/file/d/1p__j9p2BAvnkoAX-1y2AtadiZZ4_-ZE7/view",
+    iconClass: "fas fa-file-alt",
+  },
+  {
+    href: "https://www.linkedin.com/in/mohammad-kawach/",
+    iconClass: "fab fa-linkedin-in",
+  },
+  {
+    href: "https://github.com/mohammad-kawach/",
+    iconClass: "fab fa-github",
+  },
+  {
+    href: "https://telegram.me/Mohammad_Kawash",
+    iconClass: "fab fa-telegram",
+  },
+  {
+    href: "https://wa.me/+963954250979",
+    iconClass: "fab fa-whatsapp",
+  },
+  {
+    href: "https://www.codewars.com/users/mohammad-kawash",
+    iconClass: "fas fa-code",
+  },
+];
+
 export const DIGITAL_EDGE_DESCRIPTION = `During my time at DigitalEdge Company as a front-end developer and
 WordPress specialist, I played a pivotal role in delivering
 exceptional website designs. By utilizing my skills in front-end

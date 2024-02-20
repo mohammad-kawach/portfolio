@@ -1,5 +1,8 @@
+// import React from "react";
 import { useEffect } from "react";
 import useThemeStore from "../store/useThemeStore";
+import SocialIcons from "./SocialIcons";
+import CodewarsBadge from "./CodewarsBadge";
 
 const About = () => {
   const { theme } = useThemeStore();
@@ -50,56 +53,8 @@ const About = () => {
             exceptional user experiences and contributing to the success of
             dynamic and forward-thinking teams.
           </p>
-          <div className="social-icons">
-            <a
-              className="social-icon"
-              href="https://drive.google.com/drive/u/0/folders/1LghZik1mPBckG_2CHRxGdAGcgE469H36"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fas fa-file-alt"></i>
-            </a>
-            <a
-              className="social-icon"
-              href="https://www.linkedin.com/in/mohammad-kawach/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              className="social-icon"
-              href="https://github.com/mohammad-kawach/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a
-              className="social-icon"
-              href="https://telegram.me/Mohammad_Kawash"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fab fa-telegram"></i>
-            </a>
-            <a
-              className="social-icon"
-              href="https://wa.me/+963954250979"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fab fa-whatsapp"></i>
-            </a>
-            <a
-              className="social-icon"
-              href="https://www.codewars.com/users/mohammad-kawach/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <i className="fas fa-code"></i>
-            </a>
-          </div>
+          <SocialIcons />
+          <CodewarsBadge />
         </div>
       </section>
     </>

@@ -49,3 +49,13 @@
   height: 20px;
   cursor: pointer;
 }
+
+.codewars-badge-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.codewars-badge {
+  width: 100%;
+  height: auto;
+}

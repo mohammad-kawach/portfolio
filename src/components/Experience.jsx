@@ -20,7 +20,7 @@ const Experience = () => {
           position="Front-End Developer & WordPress Developer"
           description={DIGITAL_EDGE_DESCRIPTION}
           certificateName="Qualified Certification"
-          certificateURL="https://drive.google.com/drive/u/0/folders/1LghZik1mPBckG_2CHRxGdAGcgE469H36"
+          certificateURL="https://drive.google.com/file/d/1gP-LInN9N12w8iE98A5iJlbVheU9XTkq/view"
           period="October 2022 - October 2023"
         />
         <ExperienceCompany
@@ -28,7 +28,7 @@ const Experience = () => {
           position="Front-End Developer"
           description={INNOVURA_DESCRIPTION}
           certificateName="Employment Letter"
-          certificateURL="https://drive.google.com/drive/u/0/folders/1LghZik1mPBckG_2CHRxGdAGcgE469H36"
+          certificateURL="https://drive.google.com/file/d/1tJzNNXi2z0GCLhw7Nx98KCb4KwSOZh10/view?usp=drive_link"
           period="March 2023 - September 2023"
         />
         <ExperienceCompany

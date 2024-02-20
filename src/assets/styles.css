@@ -11267,7 +11267,7 @@ p.lead {
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
@@ -11422,6 +11422,7 @@ section.resume-section .resume-section-content {
   /* Media query for mobile devices */
   @media (max-width: 767px) {
     grid-template-columns: repeat(3, 1fr);
+    place-items: center;
   }
 }
 
