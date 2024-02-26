@@ -22,6 +22,16 @@ const ExperienceCompany = (props) => {
             {props.certificateName}
           </a>
         )}
+        {props.projects && (
+          <a
+            className="text-primary projects-link"
+            href={props.projects}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Projects
+          </a>
+        )}
       </div>
       <div className="flex-shrink-0">
         <span className="text-primary">{props.period}</span>
@@ -36,6 +46,7 @@ ExperienceCompany.propTypes = {
   period: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   certificateName: PropTypes.string,
+  projects: PropTypes.string,
   certificateURL: PropTypes.string,
 };
 

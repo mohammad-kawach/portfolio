@@ -29,6 +29,7 @@ const Experience = () => {
           description={INNOVURA_DESCRIPTION}
           certificateName="Employment Letter"
           certificateURL="https://drive.google.com/file/d/1tJzNNXi2z0GCLhw7Nx98KCb4KwSOZh10/view?usp=drive_link"
+          projects="https://www.innovura.io/index.php/apps/"
           period="March 2023 - September 2023"
         />
         <ExperienceCompany
