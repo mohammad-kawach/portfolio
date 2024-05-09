@@ -56,8 +56,21 @@
 }
 
 .codewars-badge {
-  width: 100%;
   height: auto;
+}
+
+@media (max-width: 767px) {
+  .codewars-badge-link {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .codewars-badge {
+    width: 85%;
+    height: auto;
+  }
 }
 
 .projects-link {

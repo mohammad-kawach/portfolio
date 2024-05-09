@@ -1,7 +1,7 @@
 const CodewarsBadge = () => {
   return (
     <a
-      className="codewars-badge-link my-5"
+      className="codewars-badge-link mb-5"
       href="https://www.codewars.com/users/mohammad-kawash/"
       target="_blank"
       rel="noreferrer"

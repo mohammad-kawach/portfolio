@@ -63,8 +63,8 @@ const About = () => {
             </div>
           </div>
           <p className="lead mb-5">{ABOUT_ME}</p>
-          <SocialIcons />
           <CodewarsBadge />
+          <SocialIcons />
         </div>
       </section>
     </>
