@@ -1,5 +1,5 @@
 import useThemeStore from "../store/useThemeStore";
-import { EDUCATION_DESCRIPTION } from "./constants";
+import { EDUCATION_DESCRIPTION } from "../utils/constants";
 
 const Education = () => {
   const { theme } = useThemeStore();

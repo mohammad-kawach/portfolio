@@ -6,10 +6,16 @@ import Skills from "./components/Skills";
 import Interests from "./components/Interests";
 import Contact from "./components/Contact";
 import useThemeStore from "./store/useThemeStore";
+import { useEffect } from "react";
 // import Awards from "./components/Awards";
 
 function App() {
   const { theme } = useThemeStore();
+
+  useEffect(() => {
+    document.body.className = theme === "dark" ? "dark-theme" : "";
+  }, [theme]);
+
   return (
     <>
       <Navigation />

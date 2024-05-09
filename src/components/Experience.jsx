@@ -4,7 +4,7 @@ import {
   DIGITAL_EDGE_DESCRIPTION,
   INNOVURA_DESCRIPTION,
   UCT_DESCRIPTION,
-} from "./constants";
+} from "../utils/constants";
 
 const Experience = () => {
   const { theme } = useThemeStore();

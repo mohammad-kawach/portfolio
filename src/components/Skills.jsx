@@ -1,7 +1,7 @@
 import useThemeStore from "../store/useThemeStore";
 import MySkills from "./MySkills";
 import Tools from "./Tools";
-import { MAJOR_SKILLS, MINOR_SKILLS, WORKFLOW } from "./constants";
+import { MAJOR_SKILLS, MINOR_SKILLS, WORKFLOW } from "../utils/constants";
 
 const Skills = () => {
   const { theme } = useThemeStore();

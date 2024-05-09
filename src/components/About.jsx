@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import useThemeStore from "../store/useThemeStore";
 import SocialIcons from "./SocialIcons";
 import CodewarsBadge from "./CodewarsBadge";
-import { ABOUT_ME } from "./constants";
+import { ABOUT_ME } from "../utils/constants";
 
 const About = () => {
   const { theme } = useThemeStore();

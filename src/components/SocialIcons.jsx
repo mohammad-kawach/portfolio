@@ -1,4 +1,4 @@
-import { socialIcons } from "./constants";
+import { socialIcons } from "../utils/constants";
 
 const SocialIcons = () => {
   return (

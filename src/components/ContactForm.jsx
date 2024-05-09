@@ -2,7 +2,7 @@ import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import useThemeStore from "../store/useThemeStore";
 // import { DevTool } from "@hookform/devtools";
-import { EMAIL_REGEX, SERVICE_ID, TEMPLATE_ID, USER_ID } from "./constants";
+import { EMAIL_REGEX, SERVICE_ID, TEMPLATE_ID, USER_ID } from "../utils/constants";
 import { useState } from "react";
 
 function ContactForm() {
