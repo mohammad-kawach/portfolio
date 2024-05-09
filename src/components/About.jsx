@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import useThemeStore from "../store/useThemeStore";
 import SocialIcons from "./SocialIcons";
 import CodewarsBadge from "./CodewarsBadge";
+import { ABOUT_ME } from "./constants";
 
 const About = () => {
   const { theme } = useThemeStore();
@@ -45,14 +46,15 @@ const About = () => {
             <a href="mailto:mkawash777@gmail.com">Email me</a>
           </div>
           <p className="lead mb-5">
-            As a passionate software engineer and front-end (React JS)
+            {ABOUT_ME}
+            {/* As a passionate software engineer and front-end (React JS)
             developer, I bring a wealth of experience in agile frameworks,
             scrum, and software development. I thrive on leveraging iterative
             approaches to corporate strategy, fostering collaborative thinking,
             and driving the overall value proposition to new heights. With a
             focus on delivering innovative solutions, I am dedicated to creating
             exceptional user experiences and contributing to the success of
-            dynamic and forward-thinking teams.
+            dynamic and forward-thinking teams. */}
           </p>
           <SocialIcons />
           <CodewarsBadge />

@@ -3,6 +3,8 @@ export const TEMPLATE_ID = "template_sq1gamw";
 export const USER_ID = "Waiya8XK4ra9Uh58K";
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+export const ABOUT_ME = `I am a passionate software engineer and front-end (React JS) developer with expertise in agile frameworks, scrum, and software development. I have valuable experience in Next.js, specializing in creating high-performance web applications, optimizing page rendering, and implementing advanced features. I thrive on driving innovation, delivering exceptional user experiences, and collaborating with dynamic teams to exceed expectations and achieve success in the ever-evolving field of software development.`;
+
 export const socialIcons = [
   {
     href: "https://drive.google.com/file/d/1p__j9p2BAvnkoAX-1y2AtadiZZ4_-ZE7/view",
@@ -44,13 +46,23 @@ community.`;
 export const INNOVURA_DESCRIPTION = `In my role at Innovura Company, I had the opportunity to develop
 custom add-ons and plugins for Jira, alongside my expertise in
 website development. This allowed me to expand my skills and
-contribute to the company&apos;s growth by delivering tailored
+contribute to the company's growth by delivering tailored
 solutions for Jira users. By leveraging my experience in Jira
 customization, I successfully developed and deployed custom
 add-ons and plugins that enhanced the functionality and efficiency
-of the platform. This dual proficiency in Jira customization and
-website development enabled me to provide comprehensive solutions
-to meet diverse client needs.`;
+of the platform.
+
+Additionally, I gained valuable experience in Next.js, a popular
+React framework for building server-side rendered and static
+websites. Through my involvement with Next.js projects, I
+strengthened my knowledge in creating high-performance web
+applications, optimizing page rendering, and implementing
+advanced features.
+
+This dual proficiency in Jira customization, website development,
+and Next.js allows me to provide comprehensive solutions to meet
+diverse client needs while leveraging the latest technologies and
+best practices.`;
 
 export const UCT_DESCRIPTION = `In my role at UCT, I focused primarily on WordPress development,
 specifically in designing and maintaining websites. I leveraged my
@@ -92,10 +104,12 @@ export const MAJOR_SKILLS = [
   "Tailwind CSS",
   "SASS",
   "React JS",
+  "Next JS",
   "Redux",
   "Zustand",
   "Material UI",
   "Shadcn UI",
+  "Python",
 ];
 
 export const MINOR_SKILLS = [
