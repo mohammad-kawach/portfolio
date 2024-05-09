@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import useThemeStore from "../store/useThemeStore";
 import SocialIcons from "./SocialIcons";
 import CodewarsBadge from "./CodewarsBadge";
+import personal from "../assets/img/profile-pic.png";
 import { ABOUT_ME } from "../utils/constants";
 
 const About = () => {
@@ -32,30 +33,36 @@ const About = () => {
     <>
       <section className="resume-section" id="about">
         <div className="resume-section-content">
-          <h1
-            className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}
-          >
-            Mohammad
-            <span className="text-primary">&nbsp;Kawash</span>
-          </h1>
-          <div className="subheading mb-5">
-            Software Engineer & Front-End Developer
-            <br />
-            <a href="tel:+963954250979">Call me</a>
-            <br />
-            <a href="mailto:mkawash777@gmail.com">Email me</a>
+          {/* <span className="d-block d-lg-none">Mohammad Kawash</span> */}
+          {/* <span className="d-none d-lg-block"> */}
+          <div className="grid-container">
+            <span className="d-lg-none">
+              <img
+                className="img-fluid img-profile rounded-circle mx-auto mb-2"
+                // src="../../assets/img/profile.jpg"
+                src={personal}
+                alt="personal-photo"
+              />
+            </span>
+            <div className="info">
+              <h1
+                className={`${
+                  theme === "dark" ? "dark-theme-heading" : ""
+                } mb-0`}
+              >
+                Mohammad
+                <span className="text-primary">&nbsp;Kawash</span>
+              </h1>
+              <div className="subheading mb-5">
+                Software Engineer & Front-End Developer
+                <br />
+                <a href="tel:+963954250979">Call me</a>
+                <br />
+                <a href="mailto:mkawash777@gmail.com">Email me</a>
+              </div>
+            </div>
           </div>
-          <p className="lead mb-5">
-            {ABOUT_ME}
-            {/* As a passionate software engineer and front-end (React JS)
-            developer, I bring a wealth of experience in agile frameworks,
-            scrum, and software development. I thrive on leveraging iterative
-            approaches to corporate strategy, fostering collaborative thinking,
-            and driving the overall value proposition to new heights. With a
-            focus on delivering innovative solutions, I am dedicated to creating
-            exceptional user experiences and contributing to the success of
-            dynamic and forward-thinking teams. */}
-          </p>
+          <p className="lead mb-5">{ABOUT_ME}</p>
           <SocialIcons />
           <CodewarsBadge />
         </div>
