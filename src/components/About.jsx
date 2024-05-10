@@ -58,7 +58,7 @@ const About = () => {
                 <br />
                 <a href="tel:+963954250979">Call me</a>
                 <br />
-                <a href="mailto:mkawash777@gmail.com">Email me</a>
+                <a href="mailto:kawashmohammad42@gmail.com">Email me</a>
               </div>
             </div>
           </div>
