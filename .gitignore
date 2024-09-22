@@ -1,6 +1,3 @@
-# Ignore EMailJS configuration files
-src/utils/EmailJSConfiguration.js
-
 # Logs
 logs
 *.log
