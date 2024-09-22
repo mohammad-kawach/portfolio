@@ -1,10 +1,3 @@
-// export const SERVICE_ID = "service_qtqbv5j";
-export const SERVICE_ID = "service_nm7zfmy";
-// export const TEMPLATE_ID = "template_sq1gamw";
-export const TEMPLATE_ID = "template_in2a5cj";
-export const USER_ID = "Waiya8XK4ra9Uh58K";
-export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export const ABOUT_ME = `I am a passionate software engineer and front-end (React JS) developer with expertise in agile frameworks, scrum, and software development. I have valuable experience in Next.js, specializing in creating high-performance web applications, optimizing page rendering, and implementing advanced features. I thrive on driving innovation, delivering exceptional user experiences, and collaborating with dynamic teams to exceed expectations and achieve success in the ever-evolving field of software development.`;
 
 export const socialIcons = [

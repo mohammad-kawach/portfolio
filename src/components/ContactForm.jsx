@@ -1,8 +1,7 @@
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import useThemeStore from "../store/useThemeStore";
-// import { DevTool } from "@hookform/devtools";
-import { EMAIL_REGEX, SERVICE_ID, TEMPLATE_ID, USER_ID } from "../utils/constants";
+import { EMAILJS_CONFIGURATION } from "../utils/EmailJSConfiguration";
 import { useState } from "react";
 
 function ContactForm() {
@@ -31,10 +30,10 @@ function ContactForm() {
     seIsSending(true);
     emailjs
       .send(
-        SERVICE_ID,
-        TEMPLATE_ID,
+        EMAILJS_CONFIGURATION.SERVICE_ID,
+        EMAILJS_CONFIGURATION.TEMPLATE_ID,
         { from_name: data.name, message: data.message, reply_to: data.email },
-        USER_ID
+        EMAILJS_CONFIGURATION.USER_ID
       )
       .then((response) => {
         seIsSending(false);
@@ -105,7 +104,7 @@ function ContactForm() {
             {...register("email", {
               required: "Email is required.",
               pattern: {
-                value: EMAIL_REGEX,
+                value: EMAILJS_CONFIGURATION.EMAIL_REGEX,
                 message: "Invalid email address format.",
               },
             })}
