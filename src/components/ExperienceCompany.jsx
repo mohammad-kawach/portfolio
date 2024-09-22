@@ -10,7 +10,10 @@ const ExperienceCompany = (props) => {
         <h3 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}>
           {props.companyName}
         </h3>
-        <div className="subheading mb-3 text-primary">{props.position}</div>
+        <div className="subheading mb-2 text-primary">{props.position}</div>
+        <div className="flex-shrink-0 mb-2">
+          <span className="text-primary">{props.period}</span>
+        </div>
         <p>{props.description}</p>
         {props.certificateName && (
           <a
@@ -32,9 +35,6 @@ const ExperienceCompany = (props) => {
             Projects
           </a>
         )}
-      </div>
-      <div className="flex-shrink-0">
-        <span className="text-primary">{props.period}</span>
       </div>
     </div>
   );
