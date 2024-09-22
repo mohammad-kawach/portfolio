@@ -1,10 +1,6 @@
 import useThemeStore from "../store/useThemeStore";
 import ExperienceCompany from "./ExperienceCompany";
-import {
-  DIGITAL_EDGE,
-  INNOVURA,
-  UCT_DESCRIPTION,
-} from "../utils/constants";
+import { WORK_EXPERIENCE } from "../utils/constants";
 
 const Experience = () => {
   const { theme } = useThemeStore();
@@ -15,29 +11,18 @@ const Experience = () => {
         <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
           Experience
         </h2>
-        <ExperienceCompany
-          companyName="Digital Edge"
-          position="Front-End Developer & WordPress Developer"
-          description={DIGITAL_EDGE.DESCRIPTION}
-          certificateName="Qualified Certification"
-          certificateURL={DIGITAL_EDGE.Qualified_Certification}
-          period="October 2022 - October 2023"
-        />
-        <ExperienceCompany
-          companyName="Innovura"
-          position="Front-End Developer"
-          description={INNOVURA.DESCRIPTION}
-          certificateName="Employment Letter"
-          certificateURL={INNOVURA.EMPLOYMENT_LETTER}
-          projects="https://www.innovura.io/index.php/apps/"
-          period="March 2023 - September 2023"
-        />
-        <ExperienceCompany
-          companyName="Unlimited Creative Solutions - UCT"
-          position="WordPress Developer"
-          description={UCT_DESCRIPTION}
-          period="November 2023 - December 2023"
-        />
+        {Object.entries(WORK_EXPERIENCE).map(([key, experience]) => (
+          <ExperienceCompany
+            key={key}
+            companyName={experience?.COMPANY_NAME}
+            position={experience?.POSITION}
+            description={experience?.DESCRIPTION}
+            certificateName={experience?.CERTIFICATE_NAME}
+            certificateURL={experience?.CERTIFICATE_URL}
+            projects={experience?.PROJECTS}
+            period={experience?.PERIOD}
+          />
+        ))}
         {/* <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="flex-grow-1">
             <h3 className="mb-0">Junior Web Designer</h3>

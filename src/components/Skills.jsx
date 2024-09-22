@@ -1,7 +1,7 @@
 import useThemeStore from "../store/useThemeStore";
 import MySkills from "./MySkills";
 import Tools from "./Tools";
-import { MAJOR_SKILLS, MINOR_SKILLS, WORKFLOW } from "../utils/constants";
+import { SKILLS, WORKFLOW } from "../utils/constants";
 
 const Skills = () => {
   const { theme } = useThemeStore();
@@ -12,8 +12,15 @@ const Skills = () => {
         <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
           Skills
         </h2>
-        <MySkills skillsHeading="Major Skills" skills={MAJOR_SKILLS} />
-        <MySkills skillsHeading="Minor Skills" skills={MINOR_SKILLS} />
+        {Object.entries(SKILLS).map(([key, skills]) => (
+          <MySkills
+            key={key}
+            skillsHeading={`${
+              key.charAt(0) + key.slice(1).toLowerCase()
+            } Skills`}
+            skills={skills}
+          />
+        ))}
         <Tools />
         <MySkills skillsHeading="Workflow" skills={WORKFLOW} />
       </div>

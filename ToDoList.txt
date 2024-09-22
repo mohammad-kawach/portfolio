@@ -1,0 +1,10 @@
+To D List :
+
+    1- support multiple languages 
+        1.1- (Arabic - English - German)
+        1.2- React i18next: https://react.i18next.com/
+        
+    2- Add courses certificates
+    
+    3- ADD INFORMATION ABOUT MASTERS DEGREE
+    

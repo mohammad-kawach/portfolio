@@ -39,16 +39,16 @@ function ContactForm() {
         seIsSending(false);
         console.log("Email sent successfully!", response);
         setMessageSentSuccessfullyAlert(
-          "I've received your message successfully."
+          "Thank you for your message. I will respond as soon as possible."
         );
         reset();
-        setTimeout(closeSuccessAlert, 7000);
+        setTimeout(closeSuccessAlert, 20000);
       })
       .catch((error) => {
         seIsSending(false);
         setMessageNotSentAlert("There was an error, please try again later.");
         console.error("Error sending email:", error);
-        setTimeout(closeErrorAlert, 7000);
+        setTimeout(closeErrorAlert, 20000);
       });
   };
 
