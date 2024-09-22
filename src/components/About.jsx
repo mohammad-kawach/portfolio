@@ -56,8 +56,6 @@ const About = () => {
               <div className="subheading mb-5">
                 Software Engineer & Front-End Developer
                 <br />
-                <a href="tel:+963954250979">Call me</a>
-                <br />
                 <a href="mailto:kawashmohammad42@gmail.com">Email me</a>
               </div>
             </div>

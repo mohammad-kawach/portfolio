@@ -1,5 +1,7 @@
-export const SERVICE_ID = "service_qtqbv5j";
-export const TEMPLATE_ID = "template_sq1gamw";
+// export const SERVICE_ID = "service_qtqbv5j";
+export const SERVICE_ID = "service_4y0sdg5";
+// export const TEMPLATE_ID = "template_sq1gamw";
+export const TEMPLATE_ID = "template_q73flak";
 export const USER_ID = "Waiya8XK4ra9Uh58K";
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
