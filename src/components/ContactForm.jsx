@@ -53,6 +53,7 @@ function ContactForm() {
   };
 
   const onSubmit = (data) => {
+    console.log("Form data:", data);
     sendEmail(data);
   };
 
@@ -109,14 +110,14 @@ function ContactForm() {
               },
             })}
             className={`${theme === "dark" ? "dark-theme-input" : ""}`}
-            type="email"
+            // type="email"
             placeholder="Your Email"
           />
           {errors.email && (
             <p className="d-md-none error-msg">{errors.email.message}</p>
           )}
         </div>
-        <div className="errors d-sm-none d-md-grid">
+        <div className="errors d-none d-md-grid">
           {errors.name && (
             <span className="error-msg">{errors.name.message}</span>
           )}
@@ -125,10 +126,17 @@ function ContactForm() {
           )}
         </div>
         <textarea
-          {...register("message", { required: "Message is required." })}
+          {...register("message", {
+            required: "Message is required.",
+            minLength: {
+              value: 10,
+              message: "Message must be at least 10 characters long.",
+            },
+          })}
           className={`${theme === "dark" ? "dark-theme-input" : ""} message`}
           placeholder="Your Message"
         />
+
         {errors.message && (
           <p className="error-msg mb-4 mt-2">{errors.message.message}</p>
         )}
