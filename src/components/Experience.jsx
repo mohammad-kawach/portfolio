@@ -1,8 +1,8 @@
 import useThemeStore from "../store/useThemeStore";
 import ExperienceCompany from "./ExperienceCompany";
 import {
-  DIGITAL_EDGE_DESCRIPTION,
-  INNOVURA_DESCRIPTION,
+  DIGITAL_EDGE,
+  INNOVURA,
   UCT_DESCRIPTION,
 } from "../utils/constants";
 
@@ -18,17 +18,17 @@ const Experience = () => {
         <ExperienceCompany
           companyName="Digital Edge"
           position="Front-End Developer & WordPress Developer"
-          description={DIGITAL_EDGE_DESCRIPTION}
+          description={DIGITAL_EDGE.DESCRIPTION}
           certificateName="Qualified Certification"
-          certificateURL="https://drive.google.com/file/d/1gP-LInN9N12w8iE98A5iJlbVheU9XTkq/view"
+          certificateURL={DIGITAL_EDGE.Qualified_Certification}
           period="October 2022 - October 2023"
         />
         <ExperienceCompany
           companyName="Innovura"
           position="Front-End Developer"
-          description={INNOVURA_DESCRIPTION}
+          description={INNOVURA.DESCRIPTION}
           certificateName="Employment Letter"
-          certificateURL="https://drive.google.com/file/d/1tJzNNXi2z0GCLhw7Nx98KCb4KwSOZh10/view?usp=drive_link"
+          certificateURL={INNOVURA.EMPLOYMENT_LETTER}
           projects="https://www.innovura.io/index.php/apps/"
           period="March 2023 - September 2023"
         />

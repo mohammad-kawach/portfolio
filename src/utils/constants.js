@@ -7,7 +7,7 @@ export const ABOUT_ME = `I am a passionate software engineer and front-end (Reac
 
 export const socialIcons = [
   {
-    href: "https://drive.google.com/file/d/1p__j9p2BAvnkoAX-1y2AtadiZZ4_-ZE7/view",
+    href: "https://mega.nz/file/7uxVFS5B#muTDswWo_G7UDH8Bk0jC5zRZBZowcZB_druUgoMdeSY",
     iconClass: "fas fa-file-alt",
   },
   {
@@ -32,16 +32,44 @@ export const socialIcons = [
   },
 ];
 
-export const DIGITAL_EDGE_DESCRIPTION = `During my time at DigitalEdge Company as a front-end developer and
-WordPress specialist, I played a pivotal role in delivering
-exceptional website designs. By utilizing my skills in front-end
-development and WordPress customization, I created visually appealing
-and user-friendly websites that reflected the company&apos;s brand
-identity. Through responsive design techniques and custom React JS
-libraries, I optimized websites for seamless performance across
-multiple devices. My contributions in integrating user-generated
-content enhanced user engagement and fostered a vibrant online
-community.`;
+export const DIGITAL_EDGE = {
+  DESCRIPTION: `During my time at DigitalEdge Company as a front-end developer and
+    WordPress specialist, I played a pivotal role in delivering
+    exceptional website designs. By utilizing my skills in front-end
+    development and WordPress customization, I created visually appealing
+    and user-friendly websites that reflected the company&apos;s brand
+    identity. Through responsive design techniques and custom React JS
+    libraries, I optimized websites for seamless performance across
+    multiple devices. My contributions in integrating user-generated
+    content enhanced user engagement and fostered a vibrant online
+    community.`,
+  Qualified_Certification: `https://mega.nz/file/HyYzmaSC#8_sDYGYUzlhCtAirx6fr7MhmcOvz6oJ2p45aoswelJo`,
+};
+
+export const INNOVURA = {
+  DESCRIPTION: `In my role at Innovura Company, I had the opportunity to develop
+    custom add-ons and plugins for Jira, alongside my expertise in
+    website development. This allowed me to expand my skills and
+    contribute to the company's growth by delivering tailored
+    solutions for Jira users. By leveraging my experience in Jira
+    customization, I successfully developed and deployed custom
+    add-ons and plugins that enhanced the functionality and efficiency
+    of the platform.
+
+    Additionally, I gained valuable experience in Next.js, a popular
+    React framework for building server-side rendered and static
+    websites. Through my involvement with Next.js projects, I
+    strengthened my knowledge in creating high-performance web
+    applications, optimizing page rendering, and implementing
+    advanced features.
+
+    This dual proficiency in Jira customization, website development,
+    and Next.js allows me to provide comprehensive solutions to meet
+    diverse client needs while leveraging the latest technologies and
+    best practices.`,
+  EMPLOYMENT_LETTER:
+    "https://mega.nz/file/7uxVFS5B#muTDswWo_G7UDH8Bk0jC5zRZBZowcZB_druUgoMdeSY",
+};
 
 export const INNOVURA_DESCRIPTION = `In my role at Innovura Company, I had the opportunity to develop
 custom add-ons and plugins for Jira, alongside my expertise in
@@ -63,6 +91,9 @@ This dual proficiency in Jira customization, website development,
 and Next.js allows me to provide comprehensive solutions to meet
 diverse client needs while leveraging the latest technologies and
 best practices.`;
+
+export const INNOVURA_EMPLOYMENT_LETTER =
+  "https://mega.nz/file/7uxVFS5B#muTDswWo_G7UDH8Bk0jC5zRZBZowcZB_druUgoMdeSY";
 
 export const UCT_DESCRIPTION = `In my role at UCT, I focused primarily on WordPress development,
 specifically in designing and maintaining websites. I leveraged my
