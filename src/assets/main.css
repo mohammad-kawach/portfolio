@@ -53,7 +53,7 @@
 .codewars-badge-link {
   display: inline-block;
   text-decoration: none;
-  }
+}
 
 .codewars-badge {
   height: auto;
@@ -108,5 +108,81 @@
 
   .grid-container span {
     text-align: center !important;
+  }
+}
+
+.language-selection {
+  cursor: pointer;
+  background-color: #bd5d38;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.language-selection:hover,
+.language-selection:active {
+  opacity: 1;
+}
+
+.language-options {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.language-options::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent; /* Color of the triangle */
+  border-top: 10px solid #b7b7b7; /* Color of the triangle */
+  top: 100%; /* Positioning the triangle above the circle */
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.language-options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-options button:hover {
+  background-color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

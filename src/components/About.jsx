@@ -4,9 +4,11 @@ import useThemeStore from "../store/useThemeStore";
 import SocialIcons from "./SocialIcons";
 import CodewarsBadge from "./CodewarsBadge";
 import personal from "../assets/img/profile-pic.png";
-import { ABOUT_ME } from "../utils/constants";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const { theme } = useThemeStore();
 
   useEffect(() => {
@@ -54,13 +56,13 @@ const About = () => {
                 <span className="text-primary">&nbsp;Kawash</span>
               </h1>
               <div className="subheading mb-5">
-                Software Engineer & Front-End Developer
+                {t("profession")}
                 <br />
-                <a href="mailto:mohmad.kawach@yahoo.com">Email me</a>
+                <a href="mailto:mohmad.kawach@yahoo.com">{t("emailMe")}</a>
               </div>
             </div>
           </div>
-          <p className="lead mb-5">{ABOUT_ME}</p>
+          <p className="lead mb-5">{t("aboutMe")}</p>
           <CodewarsBadge />
           <SocialIcons />
         </div>

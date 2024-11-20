@@ -7,6 +7,7 @@ import Interests from "./components/Interests";
 import Contact from "./components/Contact";
 import useThemeStore from "./store/useThemeStore";
 import { useEffect } from "react";
+import { Language } from "./components/Language";
 // import Awards from "./components/Awards";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Interests />
         <hr className="m-0" />
         <Contact />
+        <Language />
         {/* <hr className="m-0" /> */}
         {/* <Awards /> */}
       </div>

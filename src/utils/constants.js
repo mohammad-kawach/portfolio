@@ -1,5 +1,3 @@
-export const ABOUT_ME = `I am a passionate software engineer and front-end (React JS) developer with expertise in agile frameworks, scrum, and software development. I have valuable experience in Next.js, specializing in creating high-performance web applications, optimizing page rendering, and implementing advanced features. I thrive on driving innovation, delivering exceptional user experiences, and collaborating with dynamic teams to exceed expectations and achieve success in the ever-evolving field of software development.`;
-
 export const socialIcons = [
   {
     // CV
