@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import useThemeStore from "../store/useThemeStore";
 import { EMAILJS_CONFIGURATION } from "../utils/EmailJSConfiguration";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
+  const { t } = useTranslation();
+
   const [isSending, seIsSending] = useState(false);
   const [messageSentSuccessfullyAlert, setMessageSentSuccessfullyAlert] =
     useState("");
@@ -38,15 +41,13 @@ function ContactForm() {
       .then((response) => {
         seIsSending(false);
         console.log("Email sent successfully!", response);
-        setMessageSentSuccessfullyAlert(
-          "Thank you for your message. I will respond as soon as possible."
-        );
+        setMessageSentSuccessfullyAlert(t("EmailThanking"));
         reset();
         setTimeout(closeSuccessAlert, 20000);
       })
       .catch((error) => {
         seIsSending(false);
-        setMessageNotSentAlert("There was an error, please try again later.");
+        setMessageNotSentAlert(t("ErrSendingEmail"));
         console.error("Error sending email:", error);
         setTimeout(closeErrorAlert, 20000);
       });
@@ -88,7 +89,7 @@ function ContactForm() {
         <div className="sender-info">
           <input
             {...register("name", {
-              required: "Please type your name.",
+              required: t("PleaseEnterYourName"),
               minLength: {
                 value: 2,
                 message: "The name is too short.",
@@ -96,22 +97,22 @@ function ContactForm() {
             })}
             className={`${theme === "dark" ? "dark-theme-input" : ""}`}
             type="text"
-            placeholder="Your Name"
+            placeholder={t("YourName")}
           />
           {errors.name && (
             <p className="d-md-none error-msg">{errors.name.message}</p>
           )}
           <input
             {...register("email", {
-              required: "Email is required.",
+              required: t("EmailIsRequiredErr"),
               pattern: {
                 value: EMAILJS_CONFIGURATION.EMAIL_REGEX,
-                message: "Invalid email address format.",
+                message: t("InvalidEmailErr"),
               },
             })}
             className={`${theme === "dark" ? "dark-theme-input" : ""}`}
             // type="email"
-            placeholder="Your Email"
+            placeholder={t("YourEmail")}
           />
           {errors.email && (
             <p className="d-md-none error-msg">{errors.email.message}</p>
@@ -130,11 +131,11 @@ function ContactForm() {
             required: "Message is required.",
             minLength: {
               value: 10,
-              message: "Message must be at least 10 characters long.",
+              message: t("MsgIsShortErr"),
             },
           })}
           className={`${theme === "dark" ? "dark-theme-input" : ""} message`}
-          placeholder="Your Message"
+          placeholder={t("YourMessage")}
         />
 
         {errors.message && (
@@ -146,7 +147,7 @@ function ContactForm() {
             type="submit"
             disabled={!isDirty || isSending || isSubmitting}
           >
-            {isSubmitting ? "Sending..." : "Send Email"}
+            {isSubmitting ? t("Sending") : t("Submit")}
           </button>
         </div>
         {/* <DevTool control={control} /> */}

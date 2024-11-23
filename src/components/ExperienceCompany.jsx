@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import useThemeStore from "../store/useThemeStore";
+import { useTranslation } from "react-i18next";
 
 const ExperienceCompany = (props) => {
+  const { t } = useTranslation();
+
   const { theme } = useThemeStore();
 
   return (
@@ -10,11 +13,11 @@ const ExperienceCompany = (props) => {
         <h3 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}>
           {props.companyName}
         </h3>
-        <div className="subheading mb-2 text-primary">{props.position}</div>
+        <div className="subheading mb-2 text-primary">{t(props.position)}</div>
         <div className="flex-shrink-0 mb-2">
-          <span className="text-primary">{props.period}</span>
+          <span className="text-primary">{t(props.period)}</span>
         </div>
-        <p>{props.description}</p>
+        <p>{t(props.description)}</p>
         {props.certificateName && (
           <a
             className="btn btn-secondary mb-3"
@@ -22,7 +25,7 @@ const ExperienceCompany = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {props.certificateName}
+            {t(props.certificateName)}
           </a>
         )}
         {props.projects && (

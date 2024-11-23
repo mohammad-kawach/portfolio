@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import personal from "../assets/img/profile-pic.png";
 import ThemeToggler from "./ThemeToggler";
+import { useTranslation } from "react-i18next";
 // import { ScrollSpy } from 'react-bootstrap';
 // import { scroller } from "react-scroll";
 
 const Navigation = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Collapse responsive navbar when a nav item is clicked
     const navbarToggler = document.body.querySelector(".navbar-toggler");
@@ -55,22 +58,22 @@ const Navigation = () => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#about">
-              About
+              {t("About")}
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#experience">
-              Experience
+              {t("Experience")}
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#education">
-              Education
+              {t("Education")}
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#skills">
-              Skills
+              {t("Skills")}
             </a>
           </li>
           <li className="nav-item">
@@ -80,7 +83,7 @@ const Navigation = () => {
           </li>
           <li className="nav-item">
             <a className="nav-link js-scroll-trigger" href="#contact">
-              Contact Ne
+              {t("Contact_Me")}
             </a>
           </li>
           <li className="nav-item">

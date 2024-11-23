@@ -29,66 +29,27 @@ export const socialIcons = [
 export const WORK_EXPERIENCE = {
   DIGITAL_EDGE: {
     COMPANY_NAME: `Digital Edge`,
-    POSITION: `Front-End Developer & WordPress Developer`,
-    DESCRIPTION: `During my time at DigitalEdge Company as a front-end developer and
-      WordPress specialist, I played a pivotal role in delivering
-      exceptional website designs. By utilizing my skills in front-end
-      development and WordPress customization, I created visually appealing
-      and user-friendly websites that reflected the company&apos;s brand
-      identity. Through responsive design techniques and custom React JS
-      libraries, I optimized websites for seamless performance across
-      multiple devices. My contributions in integrating user-generated
-      content enhanced user engagement and fostered a vibrant online
-      community.`,
-    CERTIFICATE_NAME: `Qualified Certification`,
+    POSITION: "digitalEdgePosition",
+    DESCRIPTION: "digitalEdgeDescription",
+    CERTIFICATE_NAME: "digitalEdgeCertificate",
     CERTIFICATE_URL: `https://drive.google.com/file/d/1HBNGiAGYUKv4QgeOGbi0JM0oRO3I8Cof/view?usp=sharing`,
-    PERIOD: "October 2022 - October 2023",
+    PERIOD: "DIGITAL_EDGE_Period",
   },
   INNOVURA: {
     COMPANY_NAME: "INNOVURA",
-    POSITION: "Front-End Developer",
-    DESCRIPTION: `In my role at INNOVURA Company, I had the opportunity to develop
-      custom add-ons and plugins for Jira, alongside my expertise in
-      website development. This allowed me to expand my skills and
-      contribute to the company's growth by delivering tailored
-      solutions for Jira users. By leveraging my experience in Jira
-      customization, I successfully developed and deployed custom
-      add-ons and plugins that enhanced the functionality and efficiency
-      of the platform.
-  
-      Additionally, I gained valuable experience in Next.js, a popular
-      React framework for building server-side rendered and static
-      websites. Through my involvement with Next.js projects, I
-      strengthened my knowledge in creating high-performance web
-      applications, optimizing page rendering, and implementing
-      advanced features.
-  
-      This dual proficiency in Jira customization, website development,
-      and Next.js allows me to provide comprehensive solutions to meet
-      diverse client needs while leveraging the latest technologies and
-      best practices.`,
-    CERTIFICATE_NAME: "Employment Letter",
+    POSITION: "frontEndDeveloper",
+    DESCRIPTION: "innovuraDescription",
+    CERTIFICATE_NAME: "innovuraCertificate",
     CERTIFICATE_URL:
       "https://drive.google.com/file/d/1hluV3RDj4d5SDm59z0daTXcFby5MvF8f/view?usp=sharing",
     PROJECTS: "https://www.innovura.io/solutions/",
-    PERIOD: "March 2023 - September 2023",
+    PERIOD: "Innovura_Period",
   },
   UCT: {
     COMPANY_NAME: "Unlimited Creative Solutions - UCT",
-    POSITION: "WordPress Developer",
-    DESCRIPTION: `In my role at UCT, I focused primarily on WordPress development,
-      specifically in designing and maintaining websites. I leveraged my
-      expertise in website development to create visually appealing and
-      functional WordPress websites for clients. By utilizing my skills
-      in WordPress customization and optimization, I ensured that the
-      websites I developed were tailored to meet the specific needs of
-      each client. Additionally, I provided ongoing maintenance and
-      support to ensure the websites remained up-to-date, secure, and
-      performed optimally. Through my proficiency in WordPress
-      development and website maintenance, I contributed to the success
-      of UCT by delivering reliable and user-friendly websites that met
-      the expectations of our clients.`,
-    PERIOD: "November 2023 - December 2023",
+    POSITION: "wordPressDeveloper",
+    DESCRIPTION: "UCTDescription",
+    PERIOD: "UCT_Period",
   },
 };
 

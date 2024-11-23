@@ -2,7 +2,6 @@ import { useState } from "react";
 import useLanguageStore from "../store/useLanguageStore";
 import { useTranslation } from "react-i18next";
 
-
 export const Language = () => {
   const { i18n } = useTranslation();
 
@@ -15,18 +14,8 @@ export const Language = () => {
   };
 
   const changeLanguage = (lng) => {
-    switch (lng) {
-      case "en":
-        toggleLanguage(lng);
-        i18n.changeLanguage(lng);
-        break;
-      case "de":
-        toggleLanguage(lng);
-        i18n.changeLanguage(lng);
-        break;
-      default:
-        break;
-    }
+    toggleLanguage(lng);
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -36,8 +25,22 @@ export const Language = () => {
       </div>
       {showOptions && (
         <div className="language-options">
-          <button onClick={() => {toggleOptions(); changeLanguage("en")}}>English</button>
-          <button onClick={() => {toggleOptions(); changeLanguage("de")}}>Deutsch</button>
+          <button
+            onClick={() => {
+              toggleOptions();
+              changeLanguage("en");
+            }}
+          >
+            English
+          </button>
+          <button
+            onClick={() => {
+              toggleOptions();
+              changeLanguage("de");
+            }}
+          >
+            Deutsch
+          </button>
         </div>
       )}
     </div>
