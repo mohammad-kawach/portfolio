@@ -58,7 +58,7 @@ const About = () => {
               <div className="subheading mb-5">
                 {t("profession")}
                 <br />
-                <a href="mailto:mohmad.kawach@yahoo.com">{t("emailMe")}</a>
+                <a href="mailto:mohammad.kawash@proton.me">{t("emailMe")}</a>
               </div>
             </div>
           </div>
