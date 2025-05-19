@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Interests from "./components/Interests";
 import Contact from "./components/Contact";
+import Certificates from "./components/Certificates";
 import useThemeStore from "./store/useThemeStore";
 import { useEffect } from "react";
 import Education from "./components/Education";
@@ -38,6 +39,8 @@ function App() {
         <hr className="m-0" />
         <Experience />
         <hr className="m-0" />
+        {/* <Certificates />
+        <hr className="m-0" /> */}
         <Education />
         <hr className="m-0" />
         <Skills />
