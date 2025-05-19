@@ -14,6 +14,7 @@ const Experience = () => {
         {Object.entries(WORK_EXPERIENCE).map(([key, experience]) => (
           <ExperienceCompany
             key={key}
+            location={experience?.LOCATION}
             companyName={experience?.COMPANY_NAME}
             position={experience?.POSITION}
             description={experience?.DESCRIPTION}

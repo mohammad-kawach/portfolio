@@ -27,6 +27,15 @@ export const socialIcons = [
 ];
 
 export const WORK_EXPERIENCE = {
+  AUDIOTAKES_GMBH: {
+    COMPANY_NAME: "Audiotakes GmbH",
+    LOCATION: "AUDIOTAKES_GMBH_LOCATION",
+    POSITION: "AUDIOTAKES_GMBH_POSITION",
+    DESCRIPTION: "AUDIOTAKES_GMBH_DESCRIPTION",
+    CERTIFICATE_NAME: null,
+    CERTIFICATE_URL: null,
+    PERIOD: "AUDIOTAKES_PERIOD",
+  },
   DIGITAL_EDGE: {
     COMPANY_NAME: `Digital Edge`,
     POSITION: "digitalEdgePosition",

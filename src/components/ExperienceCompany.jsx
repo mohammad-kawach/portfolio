@@ -13,6 +13,7 @@ const ExperienceCompany = (props) => {
         <h3 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-0`}>
           {props.companyName}
         </h3>
+        <h5 className="subheading mb-2 text-primary">{t(props.location)}</h5>
         <div className="subheading mb-2 text-primary">{t(props.position)}</div>
         <div className="flex-shrink-0 mb-2">
           <span className="text-primary">{t(props.period)}</span>
@@ -45,6 +46,7 @@ const ExperienceCompany = (props) => {
 
 ExperienceCompany.propTypes = {
   companyName: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   period: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
