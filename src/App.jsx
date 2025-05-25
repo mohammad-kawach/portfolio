@@ -63,8 +63,8 @@ function App() {
             <hr className="m-0" />
             <Interests />
             <hr className="m-0" />
-            <Awards />
-            <hr className="m-0" />
+            <Awards display="d-none" />
+            <hr className="m-0 d-none" />
             <Contact />
             <Language />
           </motion.div>

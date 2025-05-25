@@ -1,6 +1,8 @@
-const Awards = () => {
+import PropTypes from "prop-types";
+
+const Awards = (props) => {
   return (
-    <section className="resume-section" id="awards">
+    <section className={`${props.display} resume-section`} id="awards">
       <div className="resume-section-content">
         <h2 className="mb-5">Awards & Certifications</h2>
         <ul className="fa-ul mb-0">
@@ -58,6 +60,10 @@ const Awards = () => {
       </div>
     </section>
   );
+};
+
+Awards.propTypes = {
+  display: PropTypes.string.isRequired,
 };
 
 export default Awards;
