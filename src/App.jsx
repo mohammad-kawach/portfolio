@@ -8,14 +8,16 @@ import Certificates from "./components/Certificates";
 import useThemeStore from "./store/useThemeStore";
 import { useEffect } from "react";
 import Education from "./components/Education";
-import useLanguageStore from "./store/useLanguageStore"; // Uncomment this line
+import useLanguageStore from "./store/useLanguageStore";
 import { Language } from "./components/Language";
-// import Awards from "./components/Awards";
-import i18n from "i18next"; // Import i18next if using it
+import Awards from "./components/Awards";
+import i18n from "i18next";
+import Projects from "./components/Projects";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const { theme } = useThemeStore();
-  const { toggleLanguage } = useLanguageStore(); // Use the language store
+  const { toggleLanguage } = useLanguageStore();
 
   useEffect(() => {
     document.body.className = theme === "dark" ? "dark-theme" : "";
@@ -23,35 +25,51 @@ function App() {
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem("language") || "en";
-    toggleLanguage(storedLanguage); // Set the language from localStorage
-    i18n.changeLanguage(storedLanguage); // Ensure i18next uses the correct language
-  }, []); // Run only once on mount
+    toggleLanguage(storedLanguage);
+    i18n.changeLanguage(storedLanguage);
+  }, []);
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <>
       <Navigation />
-      <div
-        className={`${
-          theme === "dark" ? "dark-theme" : ""
-        } container-fluid p-0`}
-      >
-        <About />
-        <hr className="m-0" />
-        <Experience />
-        <hr className="m-0" />
-        {/* <Certificates />
-        <hr className="m-0" /> */}
-        <Education />
-        <hr className="m-0" />
-        <Skills />
-        <hr className="m-0" />
-        <Interests />
-        <hr className="m-0" />
-        <Contact />
-        <Language />
-        {/* <hr className="m-0" /> */}
-        {/* <Awards /> */}
-      </div>
+      <AnimatePresence>
+        <div
+          className={`${
+            theme === "dark" ? "dark-theme" : ""
+          } container-fluid p-0`}
+        >
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+            transition={{ duration: 0.5 }}
+          >
+            <About />
+            <hr className="m-0" />
+            <Experience />
+            <hr className="m-0" />
+            <Projects display="d-none" />
+            <hr className="m-0 d-none" />
+            <Certificates display="d-none" />
+            <hr className="m-0 d-none" />
+            <Education />
+            <hr className="m-0" />
+            <Skills />
+            <hr className="m-0" />
+            <Interests />
+            <hr className="m-0" />
+            <Awards />
+            <hr className="m-0" />
+            <Contact />
+            <Language />
+          </motion.div>
+        </div>
+      </AnimatePresence>
     </>
   );
 }

@@ -1,11 +1,12 @@
 import useThemeStore from "../store/useThemeStore";
 import Certificate from "./Certificate";
+import PropTypes from "prop-types";
 
-const Experience = () => {
+const Experience = (props) => {
   const { theme } = useThemeStore();
 
   return (
-    <section className="resume-section" id="experience">
+    <section className={`${props.display} resume-section`} id="experience">
       <div className="resume-section-content">
         <h2 className={`${theme === "dark" ? "dark-theme-heading" : ""} mb-5`}>
           Certificates
@@ -19,6 +20,10 @@ const Experience = () => {
       </div>
     </section>
   );
+};
+
+Experience.propTypes = {
+    display: PropTypes.string.isRequired,
 };
 
 export default Experience;
