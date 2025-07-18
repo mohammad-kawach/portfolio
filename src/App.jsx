@@ -13,7 +13,6 @@ import { Language } from "./components/Language";
 import Awards from "./components/Awards";
 import i18n from "i18next";
 import Projects from "./components/Projects";
-import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const { theme } = useThemeStore();
@@ -29,47 +28,35 @@ function App() {
     i18n.changeLanguage(storedLanguage);
   }, []);
 
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <>
       <Navigation />
-      <AnimatePresence>
-        <div
-          className={`${
-            theme === "dark" ? "dark-theme" : ""
-          } container-fluid p-0`}
-        >
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            transition={{ duration: 0.5 }}
-          >
-            <About />
-            <hr className="m-0" />
-            <Experience />
-            <hr className="m-0" />
-            <Projects display="d-none" />
-            <hr className="m-0 d-none" />
-            <Certificates display="d-none" />
-            <hr className="m-0 d-none" />
-            <Education />
-            <hr className="m-0" />
-            <Skills />
-            <hr className="m-0" />
-            <Interests />
-            <hr className="m-0" />
-            <Awards display="d-none" />
-            <hr className="m-0 d-none" />
-            <Contact />
-            <Language />
-          </motion.div>
+      <div
+        className={`${
+          theme === "dark" ? "dark-theme" : ""
+        } container-fluid p-0`}
+      >
+        <div>
+          <About />
+          <hr className="m-0" />
+          <Experience />
+          <hr className="m-0" />
+          <Projects display="d-none" />
+          <hr className="m-0 d-none" />
+          <Certificates display="d-none" />
+          <hr className="m-0 d-none" />
+          <Education />
+          <hr className="m-0" />
+          <Skills />
+          <hr className="m-0" />
+          <Interests />
+          <hr className="m-0" />
+          <Awards display="d-none" />
+          <hr className="m-0 d-none" />
+          <Contact />
+          <Language />
         </div>
-      </AnimatePresence>
+      </div>
     </>
   );
 }
